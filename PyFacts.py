@@ -14,7 +14,7 @@ with open("pokemon.db") as f:
 # Send the list a random fact each
 def daily():
   for i in range(0,len(nums)-1):
-    voice.send_sms(nums[0],fax_pok[randint(0,len(fax_pok)-1)])
+    voice.send_sms(nums[i],fax_pok[randint(0,len(fax_pok)-1)])
 
 # Check inbox, respond to unread messages
 def checkInbox():
