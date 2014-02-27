@@ -1,0 +1,10 @@
+Traceback (most recent call last):
+  File "PyFacts.py", line 74, in <module>
+    main()
+  File "PyFacts.py", line 71, in main
+    checkInbox()
+  File "PyFacts.py", line 43, in checkInbox
+    for message in voice.sms().messages:
+  File "/home/pi/PyFacts/googlevoice/util.py", line 295, in __call__
+    raise ParsingError
+googlevoice.util.ParsingError
