@@ -20,8 +20,6 @@ with open("pokemon.db") as f:
     fax_pok = f.readlines()
 with open("giraffe.db") as f:
     fax_gir = f.readlines()
-with open("sex.db") as f:
-    fax_sex = f.readlines()
 
 # Send the list a random fact each
 def daily():
@@ -33,9 +31,6 @@ def daily():
     time.sleep(10)
   for i in range(0,len(nums_gir)-1):
     voice.send_sms(nums_gir[i],fax_gir[randint(0,len(fax_gir)-1)])
-    time.sleep(10)
-  for i in range(0,len(nums_sex)-1):
-    voice.send_sms(nums_sex[i],fax_sex[randint(0,len(fax_sex)-1)])
     time.sleep(10)
 
 # Check inbox, respond to unread messages
@@ -50,8 +45,6 @@ def checkInbox():
             voice.send_sms(n,fax_pok[randint(0,len(fax_pok)-1)])
           if str(n) in str(nums_gir): # if in giraffe list
             voice.send_sms(n,fax_gir[randint(0,len(fax_gir)-1)])
-          if str(n) in str(nums_sex): # if in giraffe list
-            voice.send_sms(n,fax_sex[randint(0,len(fax_sex)-1)])
           if not str(n) in str(nums_cat) and not str(n) in str(nums_pok) and not str(n) in str(nums_gir) and not str(n) in str(nums_sex): # if in no list, default to cat
             voice.send_sms(n,fax_cat[randint(0,len(fax_cat)-1)])
           time.sleep(10)
