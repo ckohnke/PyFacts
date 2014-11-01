@@ -12,8 +12,6 @@ with open("num_pok.db") as f:
     nums_pok = f.readlines()
 with open("num_gir.db") as f:
     nums_gir = f.readlines()
-with open("num_sex.db") as f:
-    nums_sex = f.readlines()
 with open("cat.db") as f:
     fax_cat = f.readlines()
 with open("pokemon.db") as f:
